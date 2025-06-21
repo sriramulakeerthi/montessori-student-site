@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Montessori Student Portal</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-logo">Montessori Portal</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#chat">Chat</a></li>
+      <li><a href="#homework">Homework</a></li>
+      <li><a href="#teachers">Teachers</a></li>
+    </ul>
+  </nav>
 
-  <div class="banner">
-    <img src="correct_school_banner.jpg" alt="School Banner">
-    <img src="correct_founder.jpg" alt="Founder" class="founder-photo">
-  </div>
-
-  <header>
-    <h1>🎓 Welcome to Montessori Student Portal</h1>
-    <p>Learn, Share, and Grow Together!</p>
-  </header>
-
-  <section class="video-section">
-    <h2>🎥 Learning Videos</h2>
-    <div class="video-container">
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/f6gUS1z4NlQ" frameborder="0" allowfullscreen></iframe>
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/VKFYfG17Z0I" frameborder="0" allowfullscreen></iframe>
+  <!-- Banner Image -->
+  <section id="home" class="banner">
+    <img src="correct_school_banner.jpg" alt="School Banner" />
+    <div class="welcome-text">
+      <h1>Welcome to Montessori Student Portal</h1>
+      <p>Learn, Share, and Connect Together!</p>
     </div>
   </section>
 
-  <main>
-    <h2>✏️ Share Something</h2>
-    <input type="text" id="name" placeholder="Your name">
-    <textarea id="message" placeholder="What would you like to share?"></textarea>
+  <!-- Share Box -->
+  <section class="share-box">
+    <input type="text" id="name" placeholder="Your name" />
+    <textarea id="message" placeholder="What's on your mind?"></textarea>
+    <input type="file" id="image-upload" accept="image/*" />
+    <input type="text" id="youtube-link" placeholder="YouTube video link (optional)" />
     <button onclick="submitPost()">Post</button>
+  </section>
 
-    <div id="posts">
-      <!-- Posts will appear here -->
+  <!-- Post Feed -->
+  <section id="post-feed" class="feed">
+    <!-- Posts will load here -->
+  </section>
+
+  <!-- Chat Section -->
+  <section id="chat" class="page-section">
+    <h2>Chat</h2>
+    <div id="chat-box">
+      <!-- Chat messages here -->
     </div>
-  </main>
+    <input type="text" id="chat-input" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </section>
 
+  <!-- Homework Section -->
+  <section id="homework" class="page-section">
+    <h2>Homework</h2>
+    <div id="homework-list">
+      <!-- Homework tasks here -->
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section id="teachers" class="page-section">
+    <h2>Teachers Area</h2>
+    <textarea id="teacher-task" placeholder="Assign a new homework task..."></textarea>
+    <button onclick="assignTask()">Assign Task</button>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
