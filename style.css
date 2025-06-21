@@ -1,47 +1,40 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #f0f4f8, #dbeaff);
   margin: 0;
   padding: 0;
+  background: url('website_background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.banner {
-  position: relative;
-}
-
-.banner img:first-child {
+.banner img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.founder-photo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 130px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
 header {
-  background-color: #2d72d9;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   text-align: center;
-  padding: 25px;
-  border-bottom: 4px solid #1c57b3;
+  padding: 30px;
 }
 
-h1 {
+header h1 {
+  font-size: 36px;
   margin: 0;
-  font-size: 32px;
+}
+
+header p {
+  font-size: 18px;
+  margin: 10px 0 0;
 }
 
 .video-section {
   padding: 30px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   text-align: center;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .video-container {
@@ -54,19 +47,18 @@ h1 {
 main {
   padding: 30px;
   max-width: 800px;
-  margin: auto;
-  background: white;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 input[type="text"], textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
   border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 16px;
 }
 
@@ -78,7 +70,7 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 button:hover {
@@ -96,3 +88,4 @@ button:hover {
 .post strong {
   color: #2d72d9;
 }
+
