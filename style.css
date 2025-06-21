@@ -1,34 +1,98 @@
 body {
-  font-family: sans-serif;
-  padding: 20px;
-  background: #f0f8ff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f0f4f8, #dbeaff);
+  margin: 0;
+  padding: 0;
 }
 
-.post-form {
-  margin-bottom: 20px;
+.banner {
+  position: relative;
 }
 
-input, textarea {
+.banner img:first-child {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.founder-photo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header {
+  background-color: #2d72d9;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-bottom: 4px solid #1c57b3;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.video-section {
+  padding: 30px;
+  background: #fff;
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+input[type="text"], textarea {
   width: 100%;
   padding: 10px;
-  margin: 6px 0;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 button {
-  background: #4CAF50;
-  color: white;
   padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2d72d9;
+  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-bottom: 30px;
+}
+
+button:hover {
+  background-color: #1c57b3;
 }
 
 .post {
-  background: white;
+  background-color: #f9f9f9;
   padding: 15px;
-  margin-top: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.post strong {
+  color: #2d72d9;
 }
