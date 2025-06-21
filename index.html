@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Montessori Student Portal</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montessori Student Portal - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-logo">Montessori Portal</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#chat">Chat</a></li>
-      <li><a href="#homework">Homework</a></li>
-      <li><a href="#teachers">Teachers</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="homework.html">Homework</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
     </ul>
   </nav>
 
   <!-- Banner Image -->
-  <section id="home" class="banner">
-    <img src="correct_school_banner.jpg" alt="School Banner" />
+  <section class="banner">
+    <img src="correct_school_banner.jpg" alt="School Banner">
     <div class="welcome-text">
       <h1>Welcome to Montessori Student Portal</h1>
       <p>Learn, Share, and Connect Together!</p>
     </div>
   </section>
 
-  <!-- Share Box -->
+  <!-- Share a Post -->
   <section class="share-box">
-    <input type="text" id="name" placeholder="Your name" />
+    <input type="text" id="name" placeholder="Your name">
     <textarea id="message" placeholder="What's on your mind?"></textarea>
-    <input type="file" id="image-upload" accept="image/*" />
-    <input type="text" id="youtube-link" placeholder="YouTube video link (optional)" />
+    <input type="file" id="image-upload" accept="image/*">
+    <input type="text" id="youtube-link" placeholder="Paste YouTube video link (optional)">
     <button onclick="submitPost()">Post</button>
   </section>
 
   <!-- Post Feed -->
   <section id="post-feed" class="feed">
-    <!-- Posts will load here -->
+    <!-- Dynamic posts will appear here -->
   </section>
 
-  <!-- Chat Section -->
-  <section id="chat" class="page-section">
-    <h2>Chat</h2>
-    <div id="chat-box">
-      <!-- Chat messages here -->
-    </div>
-    <input type="text" id="chat-input" placeholder="Type a message..." />
-    <button onclick="sendMessage()">Send</button>
-  </section>
-
-  <!-- Homework Section -->
-  <section id="homework" class="page-section">
-    <h2>Homework</h2>
-    <div id="homework-list">
-      <!-- Homework tasks here -->
-    </div>
-  </section>
-
-  <!-- Teachers Section -->
-  <section id="teachers" class="page-section">
-    <h2>Teachers Area</h2>
-    <textarea id="teacher-task" placeholder="Assign a new homework task..."></textarea>
-    <button onclick="assignTask()">Assign Task</button>
-  </section>
-
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-
