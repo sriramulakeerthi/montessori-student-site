@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Montessori Student Portal</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>Welcome to Montessori Student Portal</h1>
 
-  <div class="post-form">
-    <input id="name" type="text" placeholder="Your name">
-    <textarea id="message" placeholder="What's on your mind?"></textarea>
-    <button onclick="submitPost()">📤 Post</button>
+  <div class="banner">
+    <img src="correct_school_banner.jpg" alt="School Banner">
+    <img src="correct_founder.jpg" alt="Founder" class="founder-photo">
   </div>
 
-  <h2>📋 All Posts</h2>
-  <div id="posts"></div>
+  <header>
+    <h1>🎓 Welcome to Montessori Student Portal</h1>
+    <p>Learn, Share, and Grow Together!</p>
+  </header>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
-  <script src="script.js"></script>
+  <section class="video-section">
+    <h2>🎥 Learning Videos</h2>
+    <div class="video-container">
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/f6gUS1z4NlQ" frameborder="0" allowfullscreen></iframe>
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/VKFYfG17Z0I" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <main>
+    <h2>✏️ Share Something</h2>
+    <input type="text" id="name" placeholder="Your name">
+    <textarea id="message" placeholder="What would you like to share?"></textarea>
+    <button onclick="submitPost()">Post</button>
+
+    <div id="posts">
+      <!-- Posts will appear here -->
+    </div>
+  </main>
+
 </body>
 </html>
+
