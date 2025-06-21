@@ -2,90 +2,145 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: url('website_background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #f3f5f8;
+  color: #333;
+}
+
+.navbar {
+  background-color: #0a66c2;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
 }
 
 .banner img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.6);
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  text-align: center;
-  padding: 30px;
-}
-
-header h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-header p {
-  font-size: 18px;
-  margin: 10px 0 0;
-}
-
-.video-section {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
   border-radius: 10px;
 }
 
-.video-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-main {
-  padding: 30px;
+.share-box {
+  background: white;
   max-width: 800px;
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-input[type="text"], textarea {
-  width: 100%;
+.share-box input[type="text"],
+.share-box textarea,
+.share-box input[type="file"] {
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  font-size: 14px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2d72d9;
+.share-box button {
+  padding: 10px;
+  background: #0a66c2;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 20px;
 }
 
-button:hover {
-  background-color: #1c57b3;
+.feed {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
 }
 
 .post {
-  background-color: #f9f9f9;
+  background: white;
+  margin-bottom: 15px;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
 
-.post strong {
-  color: #2d72d9;
+.page-section {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+.page-section h2 {
+  margin-top: 0;
+}
+
+#chat-box {
+  background: #f1f1f1;
+  height: 200px;
+  overflow-y: scroll;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+#chat-input {
+  width: calc(100% - 100px);
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#homework-list {
+  margin-top: 20px;
+}
+
+textarea#teacher-task {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
 
