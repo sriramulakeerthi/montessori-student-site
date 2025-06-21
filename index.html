@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Montessori Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Montessori Student Portal</h1>
+
+  <div class="post-form">
+    <input id="name" type="text" placeholder="Your name">
+    <textarea id="message" placeholder="What's on your mind?"></textarea>
+    <button onclick="submitPost()">📤 Post</button>
+  </div>
+
+  <h2>📋 All Posts</h2>
+  <div id="posts"></div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
